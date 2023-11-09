@@ -1,0 +1,77 @@
+:root {
+	--wpvs-main-color: #989897;
+	--wpvs-light-color: #DCDCDC;
+	--wpvs-text-color: #202020;
+	--wpvs-acent-color: #3958F9;
+	--wpvs-hover-color: #666666;
+}
+
+.wpvs__row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 23px;
+}
+
+.wpvs-btns-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.wpvs__text {
+	text-transform: uppercase;
+	font-size: 16px;
+	color: var(--wpvs-text-color);
+	font-weight: 700;
+}
+
+.wpvs__voting-btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 13px;
+	padding: 9px 16px;
+	background: none;
+	border: 2px solid var(--wpvs-light-color);
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.wpvs__voting-btn--negative {
+	padding: 9px 18px;
+}
+
+.wpvs__voting-btn > svg {
+	fill: var(--wpvs-main-color);
+}
+
+.wpvs__voting-btn:hover {
+	border-color: var(--wpvs-hover-color);
+}
+
+button.wpvs__voting-btn:hover > svg {
+	fill: var(--wpvs-hover-color);
+}
+
+.wpvs-results .wpvs__voting-btn,
+.wpvs-results .wpvs__voting-btn:hover {
+	border-color: transparent;
+	cursor: initial;
+}
+
+.wpvs__voting-btn.wpvs__voting-btn--voted,
+.wpvs-results .wpvs__voting-btn.wpvs__voting-btn--voted:hover {
+	border: 2px solid var(--wpvs-acent-color);
+}
+
+.wpvs__voting-btn.wpvs__voting-btn--voted  > svg {
+	fill: var(--wpvs-acent-color);
+}
+
+@media screen and (max-width: 800px) {
+	.wpvs__row {
+		flex-direction: column;
+	}
+}
